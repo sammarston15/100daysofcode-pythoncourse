@@ -1,0 +1,3 @@
+this workspace folder is the folder you have connected to github
+
+**use this workspace folder to commit and push things to your github repo**
