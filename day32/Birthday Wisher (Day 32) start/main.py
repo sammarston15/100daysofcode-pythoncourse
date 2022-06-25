@@ -52,3 +52,6 @@ if weekday == 6:
             to_addrs=MY_EMAIL, 
             msg=f"Subject:Monday Motivation\n\n{quote}"
         )
+
+
+# you got this man, keep going.
