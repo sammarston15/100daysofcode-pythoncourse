@@ -20,7 +20,7 @@ class DataManager:
         for city in self.destination_data:
             new_data = {
                 "price": {
-                    "iataCode": city['iatacode']
+                    "iataCode": city['iataCode']
                 }
             }
             response = requests.put(
