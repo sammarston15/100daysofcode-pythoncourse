@@ -2,6 +2,7 @@ import requests
 import json
 
 sheety_get_endpoint = "https://api.sheety.co/82b93e3605e19854564fe47a3c8e3f6d/flightDeals/prices"
+sheety_get_users_endpoint = "https://api.sheety.co/82b93e3605e19854564fe47a3c8e3f6d/flightDeals/users"
 sheety_post_endpoint = "https://api.sheety.co/82b93e3605e19854564fe47a3c8e3f6d/flightDeals/prices"
 sheety_put_base_endpoint = "https://api.sheety.co/82b93e3605e19854564fe47a3c8e3f6d/flightDeals/prices" # object ID is just the row number according to the docs: https://sheety.co/docs/requests.html
 
@@ -33,3 +34,9 @@ class DataManager:
         # print the updated data once all data is done updating
         print(self.get_destination_data())
     
+    def get_customer_emails(self):
+        customers_endpoint = sheety_get_users_endpoint
+        response = requests.get(customers_endpoint)
+        data = response.json()
+        self.customer_data = data["users"]
+        return self.customer_data
